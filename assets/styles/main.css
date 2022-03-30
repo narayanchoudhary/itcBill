@@ -1,0 +1,74 @@
+.container {
+  max-width: 800px;
+}
+
+.invoice .header-brand h1 {
+  color: orange;
+}
+
+.invoice .header-tagline {
+  color: orange;
+  font-weight: 500;
+}
+
+.invoice .footer p {
+  color: orange;
+  font-weight: 500;
+}
+
+.invoice .footer .signature img {
+  width: 200px;
+}
+
+.table {
+  border: 1px solid #000;
+}
+
+.table td {
+  border-color: #000 !important;
+}
+
+.table thead tr td {
+  border-right: 1px solid #000;
+  color: orange;
+  font-weight: 500;
+}
+
+.table tbody tr td {
+  border-top: none;
+  border-bottom: none;
+  border-right: 1px solid #000;
+}
+
+#totalAmount {
+  font-weight: bold;
+  text-align: center;
+}
+
+.center1 {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable, #printable * {
+    visibility: visible;
+  }
+  #printable {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+@page {
+  size: auto;
+  margin: 0 20px;
+}
+/*# sourceMappingURL=main.css.map */

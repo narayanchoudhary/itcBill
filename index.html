@@ -1,1 +1,123 @@
-Hi There
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Om Traders | Invoice</title>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+</head>
+<body>
+    <section class="container pt-5">
+        <div class="card p-5">
+            <div class="mb-3 text-center">
+                <h3>Enter Invoice Details</h3>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="num" class="col-sm-2 col-form-label">Bill No.</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="num">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="pkt" class="col-sm-2 col-form-label">Packets</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="pkt">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="vehicle" class="col-sm-2 col-form-label">Vehicle</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control uppercase" id="vehicle">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="date" class="col-sm-2 col-form-label">Date</label>
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" id="date">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="invoiceTo" class="col-sm-2 col-form-label">To</label>
+                <div class="col-sm-10">
+                  <select name="invoiceTo" id="invoiceTo" class="form-control">
+                      <option value="ITC Limited Food Division, ICML, Velur & Vadugappatti Village, Viralimalai TK, Pudukkattai TN 621316 (Trichy) ">Tirchi | ITC Limited - Food Division, icml, Velur & Vadugappatti Village, Viralimalai TK, Pudukkattai TN 621316</option>
+                      <option value="ITC Limited Food Division, FBN Snacks Plant D-1 MIDC Ranjangaon Indl Area Shirpur Pune, 412220 (Pune) ">Puna | ITC Limited - FBN Snacks Plant D-1 MiDC Ranjangaon indl area shirpur Pune, 412220</option>
+                      <option value="ITC Limited Food Division, Immavu And Adakanahalli Village, Thandya Indusrial Area, Chikkaiahana Chatra Hobli (Mysure) ">Mysure | ITC Limited - FBD Mysure, iMMAVU AND ADAKANAHALLI VILLAGE, THANDYA INDUSTRIAL AREA, CHIKKAIAHANA CHATRA HOBLI</option>
+                      <option value="ITC Limited Food Division, Riqo Foods Private Limited, Survey No. 70/1A & 70/1B, Nyayampalli village, Pedavegi mandal, West Godavari District, Andhra Pradesh- 534450 (Vijaywada) ">VijayWada | ITC Limited c/o Riqo Foods Private Limited, Survey No. 70/1A & 70/1B, Nyayampalli village, Pedavegi mandal, West Godavari District, Andhra Pradesh- 534450</option>
+                      <option value="ITC Limited Food Division, Patwari Food Pvt. Ltd. Survey No.1070 Samaram Village Medchal Mandal, Rangaleddi Telangana - 501401 (Hedrabad)">Hedrabad | ITC Limited Food Division C/O Patwari Food Pvt. Ltd. Survey No.1070 Samaram Village Medchal Mandal, Rangaleddi Telangana - 501401</option>
+                      <option value="ITC Limited Food Division, ICML, Mouja-kulai, JL No 26, PS Panchla, Howrah, PIN 711322 (Panchala)">Kolkata | ITC Limited Food Division, ICML, Mouja-kulai, JL No 26, PS Panchla, Howrah, PIN 711322</option>
+                      <option value="ITC Limited Food Division, Voccon Manufacturing Pvt Ltd, Avinashi Taluk, Tirupur, 641654 TN (Coimbature)">Coimbature | ITC Limited Food Division, Voccon Manufacturing Pvt Ltd, Avinashi Taluk, Tirupur, 641654 TN</option>
+                      <option value="ITC LIMITED Food Division, Graintech Foods Snacks, Plont No-11A and 20A, Northe East Mega Foods Park Ltd.Tihu Nalbari, Assam, 781377 (Guwahati)">Guwahati | ITC LIMITED, FOODS DIVISION c/o Graintech Foods Snacks, Plont No-11A and 20A, Northe East Mega Foods Park Ltd.Tihu Nalbari, Assam, 781377</option>
+                      <option value="ITC LIMITED Food Division, Medak ICML Plant, Sy/ Nos: 395-401, 404-406/AA, 406/ Toopran Mandal, Medak, 502336 36 Telangana (Medak)">Medak | ITC LIMITED Food Division, Medak ICML Plant, Sy/ Nos: 395-401, 404-406/AA, 406/ Toopran Mandal, Medak, 502336 36 Telangana (Medak)</option>
+                      <option value="Balaji Wafers Private Limited Valsad">Valsad Balaji</option>
+                      <option value="Balalji Wafers Private Limited Rajkot">Rajkot Balaji</option>
+                      <option value="Gopal Snacks Private Limited (Modasa)">Gopal Snacks Private Limited (Modasa)</option>
+                      <option value="Ravi Traders Export">Ravi Traders Export</option>
+                      <option value="Euro India Fresh Foods Limited ( Hajira )">Euro India Fresh Foods Limited ( Hajira )</option>
+                 
+                  </select>
+                </div>
+            </div>
+            <!-- <div class="mb-3 row">
+                <label for="product" class="col-sm-2 col-form-label">Product</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="product">
+                </div>
+            </div> -->
+            <div class="mb-3 row">
+                <label for="weight" class="col-sm-2 col-form-label">Weight</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="weight" value="0" oninput="calculateTotal()">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="rate" class="col-sm-2 col-form-label">Rate</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="rate" value="0" oninput="calculateTotal()">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="amount" class="col-sm-2 col-form-label">Amount</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="amount" readonly>
+                </div>
+            </div>
+            <div class="mb-3 text-center">
+                <button class="btn btn-primary w-25" onClick="openPreview()">PREVIEW</button>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/scripts/main.js"></script>
+    <script>
+      function calculateTotal() {
+          totalAmount = document.getElementById("weight").value * document.getElementById("rate").value
+          document.getElementById("amount").value = Math.round(totalAmount);
+          // return totalAmount;
+      }
+      function openPreview() {
+          localStorage.setItem("num",document.getElementById("num").value);
+          localStorage.setItem("pkt",document.getElementById("pkt").value);
+          localStorage.setItem("vehicle",document.getElementById("vehicle").value);
+          let mydate = new Date(document.getElementById("date").value);
+
+          MyDateString = ('0' + mydate.getDate()).slice(-2) + '-'
+             + ('0' + (mydate.getMonth()+1)).slice(-2) + '-'
+             + mydate.getFullYear();
+          
+          localStorage.setItem("date",MyDateString);
+          localStorage.setItem("invoiceTo",document.getElementById("invoiceTo").value);
+          // localStorage.setItem("product",document.getElementById("product").value);
+          localStorage.setItem("weight",document.getElementById("weight").value);
+          localStorage.setItem("rate",document.getElementById("rate").value);
+          localStorage.setItem("amount",document.getElementById("amount").value);
+          window.open("invoice.html");
+      }
+    </script>
+</body>
+</html>

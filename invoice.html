@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Om Traders | Invoice Preview</title>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+</head>
+
+<body>
+    <section class="container pt-5 invoice" id="printable">
+        <div class="header mb-3">
+            <div class="header-brand">
+                <div class="d-flex justify-content-between">
+                    <h1>HARI OM TRADERS</h1>
+                    <div class="header-contact">
+                        <div>
+                            <label>Mob: </label>
+                            <span>9301204742</span>
+                        </div>
+                        <div>
+                            <label>Mob: </label>
+                            <span>9303678012</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-tagline text-center border border-warning my-2 py-1">
+                Best Quality Potatoes and Onion Order Supplies & Commission Agent
+            </div>
+            <div class="header-address text-center">
+                Khasra No. 508/1/2, Village Dharawara, Post Kalariya, Tehsil Rau, District Inodre, ( M.P. ) , Pincode - 453001
+            </div>
+            <div class="header-info mt-5">
+
+                <div class="row mb-2">
+                    <div class="col-2">
+                        <label> Bill No.</label>
+                        <span class="border-bottom border-dark" id="num"></span>
+                    </div>
+                    <div class="col-3">
+                        <label>Packets : </label>
+                        <span class="border-bottom border-dark" id="pkt"></span>
+                    </div>
+                    <div class="col-4">
+                        <label>Vehicle No. : </label>
+                        <span class="border-bottom border-dark uppercase" id="vehicle"></span>
+                    </div>
+                    <div class="col-3 text-end">
+                        <label>Date : </label>
+                        <span class="border-bottom border-dark" id="date"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div style="display: flex;">
+                            <div style="flex-shrink: 0;">
+                                <label>M/s : &nbsp;</label>
+                            </div>
+                            <div>
+                                <span class="border-bottom border-dark" id="invoiceTo"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td class="center1">Particulars</td>
+                        <td class="center1">Weight</td>
+                        <td class="center1" style="width: 110px;">Rate</td>
+                        <td class="w-22 center1">Amount</td>
+                        <td>Exp</td>
+                        <td>Amount</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center1" id="product">
+                            Potato HSN-0701
+                        </td>
+                        <td class="center1" id="weight"></td>
+                        <td class="center1" id="rate"></td>
+                        <td class="center1" id="amount"></td>
+                        <td>Comm.</td>
+                        <td class="border-bottom"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Hamali</td>
+                        <td class="border-bottom"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Mandi Tax</td>
+                        <td class="border-bottom"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Other</td>
+                        <td class="border-bottom"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Bardan</td>
+                        <td class="border-bottom"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Advance</td>
+                        <td class="border-bottom"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <!-- Bottom Rows Begins -->
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Total Rs.</td>
+                        <td class="border-top"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Exp.</td>
+                        <td class="border-top"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Net Amount</td>
+                        <td class="border-top" id="totalAmount"></td>
+                        <td>Total Exp.</td>
+                        <td class="border-top"></td>
+                    </tr>
+                    <!-- Bottom Rows Ends -->
+
+                </tbody>
+            </table>
+
+        </div>
+        <div class="footer text-end mt-4">
+            <p>For: HARI OM TRADERS</p>
+            <div class="signature">
+                <canvas id="myCanvas" width="200" height="100"></canvas>
+            </div>
+            <img style="display: none;" id="mySignature" src="./assets/images/signature.png" alt="">
+            <!-- <img id="mySignature" src="./assets/images/Narayan-Signature.svg" alt=""> -->
+        </div>
+    </section>
+
+    <!-- <hr>
+    <div class="mb-3 text-center">
+        <button class="btn btn-primary w-25" onClick="printInvoice()">PRINT</button>
+    </div> -->
+
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/scripts/main.js" defer></script>
+    <script>
+
+        window.onload = function () {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            var img = document.getElementById("mySignature");
+            // ctx.drawImage(img, 10, 10);
+            ctx.drawImage(img,0, 0, 230, 100);
+            prepareInvoice();
+        }
+        function prepareInvoice() {
+            document.getElementById("num").innerHTML = localStorage.getItem("num");
+            document.getElementById("pkt").innerHTML = localStorage.getItem("pkt");
+            document.getElementById("vehicle").innerHTML = localStorage.getItem("vehicle");
+            document.getElementById("date").innerHTML = localStorage.getItem("date");
+            document.getElementById("invoiceTo").innerHTML = localStorage.getItem("invoiceTo");
+            // document.getElementById("product").innerHTML = localStorage.getItem("product");
+            document.getElementById("weight").innerHTML = localStorage.getItem("weight");
+            document.getElementById("rate").innerHTML = localStorage.getItem("rate");
+            document.getElementById("amount").innerHTML = localStorage.getItem("amount");
+            document.getElementById("totalAmount").innerHTML = localStorage.getItem("amount");
+        }
+        function printInvoice() {
+
+            var printContents = document.getElementById("printable").innerHTML;
+            var originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+    </script>
+</body>
+
+</html>

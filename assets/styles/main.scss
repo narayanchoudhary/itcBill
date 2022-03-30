@@ -1,0 +1,76 @@
+// Common Styles Begins
+.container {
+    max-width: 800px;
+}
+// Common Styles Ends
+
+// Invoice Styles Begins
+.invoice {
+    .header {
+        &-brand {
+            h1 {
+                color: orange;
+            }
+        }
+        &-tagline {
+            color: orange;
+            font-weight: 500;
+        }
+    }
+    .footer {
+        p {
+            color: orange;
+            font-weight: 500;
+        }
+        .signature {
+            img {
+                width: 200px;
+            }
+        }
+    }
+}
+
+.table {
+    border: 1px solid #000;
+    td {
+        border-color: #000 !important;
+    }
+    thead {
+        tr {
+            td {
+                border-right: 1px solid #000;
+                color: orange;
+                font-weight: 500;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                border-top: none;
+                border-bottom: none;
+                border-right: 1px solid #000;
+            }
+        }
+    }
+}
+// Invoice Styles Ends
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    #printable, #printable * {
+      visibility: visible;
+    }
+    #printable {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+}
+
+@page {
+    size: auto;
+    margin: 0 20px; 
+}
